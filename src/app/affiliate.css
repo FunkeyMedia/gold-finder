@@ -36,6 +36,16 @@
   font-size: 0.78rem;
 }
 
+.product-image { background:#fff; height:260px; overflow:hidden; position:relative; }
+.product-image img { object-fit:contain; padding:22px; }
+.product-image span { color:#918c81; font-size:.72rem; position:absolute; right:18px; top:15px; z-index:1; }
+.live-price { color:#755417; font-size:1.22rem; font-weight:600; margin:16px 0 0; }
+.features { color:#66645e; font-size:.78rem; margin:15px 0; padding-left:18px; }
+.features li { margin:5px 0; }
+.api-status { background:#eee7d9; border:1px solid #d8cbb2; margin:18px 0; padding:18px 20px; }
+.api-status p { margin:5px 0 0; }
+.actions a.amazon { background:#b98b35; border-color:#b98b35; color:#171814; }
+
 @media (max-width: 590px) {
   .actions button {
     margin-left: 0;

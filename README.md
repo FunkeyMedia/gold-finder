@@ -10,7 +10,9 @@ An English-language discovery and comparison experience for physical investment 
 - Product comparison for up to four items
 - Responsive premium interface
 - Buying guide, research references, FAQ and affiliate disclosure
-- Amazon PartnerNet search links for Germany (`Onlinestarkei-21`), the United States (`goldfindercom-20`) and the United Kingdom (`goldfindercom-21`)
+- Server-side Amazon.de Creators API product feed using PartnerNet ID `Onlinestarkei-21`
+- Live ASINs, parent ASINs, product images, availability, features and current Euro prices
+- Parent-ASIN model deduplication, 30-minute caching, request timeouts and a price-free outage state
 - SEO metadata and sitemap
 
 ## External integrations still required
