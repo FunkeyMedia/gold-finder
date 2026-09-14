@@ -1,0 +1,27 @@
+.actions {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.actions a.amazon {
+  background: #b98b35;
+  border-color: #b98b35;
+  color: #171814;
+}
+
+.actions button {
+  margin-left: auto;
+}
+
+.amazon-note {
+  margin: 22px 0 0;
+  max-width: 920px;
+  color: #706d66;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 590px) {
+  .actions button {
+    margin-left: 0;
+  }
+}

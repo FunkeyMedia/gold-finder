@@ -8,6 +8,7 @@ An English-language discovery and comparison experience for physical investment 
 - Product comparison for up to four items
 - Responsive premium interface
 - Buying guide, research references, FAQ and affiliate disclosure
+- Amazon.de PartnerNet search links using tracking ID `Onlinestarkei-21`, ready for international redirection when OneLink is enabled
 - SEO metadata and sitemap
 
 ## External integrations still required
