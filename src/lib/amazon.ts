@@ -3,14 +3,14 @@ import { getCache } from '@vercel/functions';
 import type { AmazonProduct, Currency, Marketplace, ProductResponse } from './types';
 type Config={name:string;domain:string;tag:string;currency:Currency;locale:string;searches:string[]};
 export const MARKETPLACES:Record<Marketplace,Config>={
- de:{name:'Germany',domain:'www.amazon.de',tag:'Onlinestarkei-21',currency:'EUR',locale:'de_DE',searches:['Anlagegold Feingold','Goldbarren 999,9','Goldbarren 1g 2g 5g','Goldbarren 10g 20g','Goldbarren 1 oz 50g','Goldbarren 100g 250g','Goldmünze Feingold','Krügerrand Maple Leaf Britannia Gold']},
+ de:{name:'Germany',domain:'www.amazon.de',tag:'Onlinestarkei-21',currency:'EUR',locale:'de_DE',searches:['Anlagegold Feingold','Goldbarren 999,9','Goldbarren 0,1g 0,5g','Goldbarren 1g Feingold','Goldbarren 2g 2,5g Feingold','Goldbarren 5g Feingold','Goldbarren 10g Feingold','Goldbarren 20g 25g Feingold','Goldbarren 1 oz Feingold','Goldbarren 50g Feingold','Goldbarren 100g 250g','Gold Tafelbarren Combibar','Goldmünze 1/10 oz Feingold','Goldmünze 1/4 oz Feingold','Goldmünze 1/2 oz Feingold','Goldmünze 1 oz Feingold','Krügerrand Goldmünze','Maple Leaf Goldmünze','Britannia Goldmünze','Wiener Philharmoniker Goldmünze']},
  us:{name:'United States',domain:'www.amazon.com',tag:'goldfindercom-20',currency:'USD',locale:'en_US',searches:['investment gold bullion','999.9 gold bars','1 gram 5 gram gold bar','10 gram 20 gram gold bar','1 oz gold bar','gold bullion coins','Krugerrand Maple Leaf Britannia gold coin']},
  uk:{name:'United Kingdom',domain:'www.amazon.co.uk',tag:'goldfindercom-21',currency:'GBP',locale:'en_GB',searches:['investment gold bullion','999.9 gold bars','1 gram 5 gram gold bar','10 gram 20 gram gold bar','1 oz gold bar','gold bullion coins','Krugerrand Maple Leaf Britannia gold coin']}
 };
 const TOKEN_URL='https://api.amazon.co.uk/auth/o2/token',SEARCH_URL='https://creatorsapi.amazon/catalog/v1/searchItems',CACHE_MS=30*60*1000;
 const ALLOWED_IMAGES=new Set(['m.media-amazon.com','images-na.ssl-images-amazon.com','images-eu.ssl-images-amazon.com']);
 const AVAILABLE=new Set(['IN_STOCK','INSTOCK','INSTOCKSCARCE','LEADTIME']);
-const EXCLUDED=/vergoldet|goldfarben|gold farben|plattiert|gold plated|replica|replik|nachprägung|medaille|münzkapsel|capsule|sammlerbox|geschenkbox|gift box|foil|blattgold|jewelry|jewellery|schmuck|pendant|anhänger|necklace|kette|ring|earring|ohrring|bracelet|armband/i;
+const EXCLUDED=/vergoldet|goldfarben|gold farben|plattiert|gold plated|replica|replik|nachprägung|medaille|münzkapsel|capsule|sammlerbox|leer(?:e|er)? box|empty case|display case|case for|foil|blattgold|jewelry|jewellery|schmuck|pendant|anhänger|necklace|kette|ring|earring|ohrring|bracelet|armband/i;
 const GOLD_PRODUCT=/gold bar|gold bullion|gold coin|goldbarren|feingold|goldmünze|krügerrand|krugerrand|maple leaf|britannia|philharmoniker|kangaroo|känguru|gold nugget/i;
 const caches=new Map<Marketplace,{until:number;data:ProductResponse}>();let tokenCache:{until:number;value:string}|undefined;
 const pick=(value:unknown,path:string):any=>path.split('.').reduce<any>((current,key)=>current?.[key],value);
@@ -23,7 +23,7 @@ function deduplicate(products:AmazonProduct[]){const unique=new Map<string,Amazo
 export async function getAmazonProducts(marketplace:Marketplace):Promise<ProductResponse>{
  const c=MARKETPLACES[marketplace],base={marketplace,marketplaceName:c.name,amazonDomain:c.domain,currency:c.currency,locale:c.locale};
  const cached=caches.get(marketplace);if(cached&&cached.until>Date.now())return cached.data;
- const runtimeCache=getCache({namespace:'gold-finder-amazon'}),cacheKey=`products:${marketplace}:v1`;
+ const runtimeCache=getCache({namespace:'gold-finder-amazon'}),cacheKey=`products:${marketplace}:v2`;
  try{
   const shared=await runtimeCache.get(cacheKey) as ProductResponse|undefined;
   if(shared?.live&&shared.products?.length){caches.set(marketplace,{until:Date.now()+CACHE_MS,data:shared});return shared;}
@@ -31,7 +31,7 @@ export async function getAmazonProducts(marketplace:Marketplace):Promise<Product
  try{
   const access=await accessToken(),found:AmazonProduct[]=[];
   for(const keywords of c.searches)for(const page of[1,2]){found.push(...await search(access,keywords,page,c));await new Promise(resolve=>setTimeout(resolve,1050));}
-  const products=deduplicate(found),data:ProductResponse={...base,products,count:products.length,live:true,fetchedAt:new Date().toISOString()};
+  const products=deduplicate(found).slice(0,250),data:ProductResponse={...base,products,count:products.length,live:true,fetchedAt:new Date().toISOString()};
   caches.set(marketplace,{until:Date.now()+CACHE_MS,data});
   try{await runtimeCache.set(cacheKey,data,{ttl:1800,tags:[`amazon-products-${marketplace}`],name:`Amazon ${marketplace} products`});}catch(error){console.error('Runtime cache write unavailable:',error instanceof Error?error.message:'unknown');}
   return data;

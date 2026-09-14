@@ -3,6 +3,72 @@
   justify-content: flex-start;
 }
 
+.filter-panel {
+  background: #faf8f2;
+  border: 1px solid var(--line);
+  margin-top: 60px;
+}
+.filter-panel .search {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 14px;
+  min-height: 76px;
+  padding: 13px 20px;
+}
+.filter-panel .search svg,
+.filter-selects svg { color: var(--gold); flex: 0 0 auto; width: 19px; }
+.filter-panel input,
+.filter-panel select { background: transparent; border: 0; color: var(--ink); outline: 0; width: 100%; }
+.quick-filters {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+.filter-group {
+  border: 0;
+  border-right: 1px solid var(--line);
+  margin: 0;
+  min-width: 0;
+  padding: 18px 20px 20px;
+}
+.filter-group:last-child { border-right: 0; }
+.filter-group legend {
+  color: #74716a;
+  font-size: .69rem;
+  font-weight: 600;
+  letter-spacing: .11em;
+  padding: 0;
+  text-transform: uppercase;
+}
+.filter-group > div { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.filter-group button {
+  background: #fff;
+  border: 1px solid #d7d1c5;
+  border-radius: 999px;
+  color: #5f5c55;
+  cursor: pointer;
+  font-size: .78rem;
+  padding: 8px 12px;
+  transition: .15s ease;
+}
+.filter-group button:hover { border-color: #9d762e; color: #755417; }
+.filter-group button.active { background: #1d1e1a; border-color: #1d1e1a; color: #fff; }
+.filter-selects {
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.filter-selects label {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  min-height: 68px;
+  padding: 12px 20px;
+}
+.filter-selects label:first-child { border-right: 1px solid var(--line); }
+.filter-selects .select span { width: 100%; }
+
 .amazon-picker summary {
   background: #b98b35;
   border-color: #b98b35;
@@ -50,6 +116,20 @@
   .actions button {
     margin-left: 0;
   }
+}
+
+@media (max-width: 900px) {
+  .quick-filters { grid-template-columns: 1fr; }
+  .filter-group { border-bottom: 1px solid var(--line); border-right: 0; }
+  .filter-group:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 590px) {
+  .filter-panel { margin-top: 40px; }
+  .filter-selects { grid-template-columns: 1fr; }
+  .filter-selects label:first-child { border-bottom: 1px solid var(--line); border-right: 0; }
+  .filter-group button { min-height: 42px; }
+  .result-head { align-items: flex-start; gap: 12px; }
 }
 
 /* Keep product cards aligned even when Amazon supplies very different copy lengths. */
