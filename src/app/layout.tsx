@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './affiliate.css';
+import './legal.css';
 
 export const metadata: Metadata = {
   title: 'Gold Finder — Compare physical gold with clarity',
