@@ -1,5 +1,7 @@
 # Gold Finder
 
+Production domain: https://www.gold-finder.com
+
 An English-language discovery and comparison experience for physical investment gold. The current release uses verified public product and dealer pages and intentionally displays no live prices until an authorised product feed is connected.
 
 ## Included
