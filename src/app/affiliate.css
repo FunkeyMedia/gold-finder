@@ -3,11 +3,27 @@
   justify-content: flex-start;
 }
 
-.actions a.amazon {
+.amazon-picker summary {
   background: #b98b35;
   border-color: #b98b35;
   color: #171814;
 }
+
+.amazon-picker { position: relative; }
+.amazon-picker summary {
+  align-items: center; cursor: pointer; display: flex; gap: 6px;
+  list-style: none; padding: 10px 13px;
+}
+.amazon-picker summary::-webkit-details-marker { display: none; }
+.amazon-picker[open] summary svg { transform: rotate(180deg); }
+.amazon-picker > div {
+  background: #fff; border: 1px solid #d9d3c8; box-shadow: 0 12px 30px rgba(20,20,16,.14);
+  display: grid; left: 0; min-width: 190px; padding: 6px; position: absolute; top: calc(100% + 6px); z-index: 5;
+}
+.actions .amazon-picker a {
+  background: transparent; border: 0; color: #282821; justify-content: space-between; padding: 9px 10px;
+}
+.actions .amazon-picker a:hover { background: #f4f0e8; }
 
 .actions button {
   margin-left: auto;

@@ -10,7 +10,7 @@ An English-language discovery and comparison experience for physical investment 
 - Product comparison for up to four items
 - Responsive premium interface
 - Buying guide, research references, FAQ and affiliate disclosure
-- Amazon.de PartnerNet search links using tracking ID `Onlinestarkei-21`, ready for international redirection when OneLink is enabled
+- Amazon PartnerNet search links for Germany (`Onlinestarkei-21`), the United States (`goldfindercom-20`) and the United Kingdom (`goldfindercom-21`)
 - SEO metadata and sitemap
 
 ## External integrations still required
