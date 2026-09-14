@@ -2,6 +2,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+.brand .brand-lockup{align-items:center;border:0;border-radius:0;display:flex;height:auto;width:auto;gap:11px;letter-spacing:inherit}.brand .brand-lockup>span{border:0;border-radius:0;color:inherit;display:inline;height:auto;width:auto;font-family:inherit;letter-spacing:.19em}.brand-lockup img{height:42px;object-fit:contain;width:42px}footer .brand-lockup img{height:46px;width:46px}
 .seo-hubs{padding:110px 5vw}.seo-hubs h2{font:500 clamp(2.5rem,4.4vw,4.7rem)/.94 var(--serif);letter-spacing:-.045em;margin:0}.seo-hubs>div{display:grid;gap:12px;grid-template-columns:repeat(3,1fr);margin-top:45px}.seo-hubs a{background:#e8dfcc;display:grid;min-height:185px;padding:23px;transition:.2s}.seo-hubs a:hover{background:#ded1b8;transform:translateY(-3px)}.seo-hubs a span{color:#8b6827;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}.seo-hubs a strong{font:500 1.42rem/1.12 var(--serif)}.seo-hubs a svg{align-self:end;width:18px}
 
 .filter-panel {
