@@ -23,7 +23,7 @@ function deduplicate(products:AmazonProduct[]){const unique=new Map<string,Amazo
 export async function getAmazonProducts(marketplace:Marketplace):Promise<ProductResponse>{
  const c=MARKETPLACES[marketplace],base={marketplace,marketplaceName:c.name,amazonDomain:c.domain,currency:c.currency,locale:c.locale};
  const cached=caches.get(marketplace);if(cached&&cached.until>Date.now())return cached.data;
- const runtimeCache=getCache({namespace:'gold-finder-amazon'}),cacheKey=`products:${marketplace}:v2`;
+ const runtimeCache=getCache({namespace:'gold-finder-amazon'}),cacheKey=`products:${marketplace}:v1`;
  try{
   const shared=await runtimeCache.get(cacheKey) as ProductResponse|undefined;
   if(shared?.live&&shared.products?.length){caches.set(marketplace,{until:Date.now()+CACHE_MS,data:shared});return shared;}
