@@ -51,3 +51,69 @@
     margin-left: 0;
   }
 }
+
+/* Keep product cards aligned even when Amazon supplies very different copy lengths. */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+.card h3 {
+  display: -webkit-box;
+  height: 5.35rem;
+  min-height: 5.35rem;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.card dl {
+  height: 10.85rem;
+  overflow: hidden;
+}
+.card dl div {
+  align-items: center;
+  min-height: 2.7rem;
+}
+.card dd {
+  display: -webkit-box;
+  max-width: 62%;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.features {
+  height: 7.15rem;
+  min-height: 7.15rem;
+  overflow: hidden;
+}
+.features li {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.live-price,
+.no-price {
+  align-items: center;
+  display: flex;
+  min-height: 3.05rem;
+  margin-top: auto;
+}
+.actions {
+  min-height: 5.25rem;
+  align-content: flex-start;
+}
+.actions a.amazon {
+  flex: 1 1 175px;
+}
+
+@media (max-width: 590px) {
+  .card h3 { min-height: 5.35rem; }
+}
