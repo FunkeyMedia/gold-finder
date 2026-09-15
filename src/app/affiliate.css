@@ -201,3 +201,5 @@
 @media (max-width: 590px) {
   .card h3 { min-height: 5.35rem; }
 }
+
+footer>div{flex-wrap:wrap}
