@@ -3,24 +3,36 @@ import {notFound} from 'next/navigation';
 import {ArrowRight,CheckCircle2,ExternalLink} from 'lucide-react';
 import {findSeoPage,seoPages,type SeoPage} from '@/lib/seo-pages';
 import BrandLogo from '@/components/BrandLogo';
+import ManufacturerLanding,{manufacturerMetadata} from '@/components/ManufacturerLanding';
+import {findManufacturerPage,manufacturerPages} from '@/lib/manufacturer-products';
+import ProductLanding,{ProductHub,productMetadata,hubMetadata} from '@/components/ProductLanding';
+import {findProductPage,productPages,regions,markets} from '@/lib/product-catalogue';
 
 type Props={params:Promise<{slug:string[]}>};
 const origin='https://www.gold-finder.com';
 const pathFor=(page:SeoPage)=>`/${page.slug.join('/')}`;
 
-export function generateStaticParams(){return seoPages.map(page=>({slug:page.slug}))}
+export function generateStaticParams(){return [...new Set([...seoPages.map(p=>p.slug.join('/')),...productPages.map(p=>p.path.slice(1)),...manufacturerPages.map(p=>p.path.slice(1)),...regions.map(r=>markets[r].hub.slice(1))])].map(path=>({slug:path.split('/')}))}
 
 export async function generateMetadata({params}:Props):Promise<Metadata>{
-  const page=findSeoPage((await params).slug);
+  const slug=(await params).slug;
+  const pathName=`/${slug.join('/')}`;
+  const itemPage=findManufacturerPage(pathName);
+  if(itemPage)return manufacturerMetadata(itemPage.product,itemPage.region);
+  const productPage=findProductPage(pathName);
+  if(productPage)return productMetadata(productPage.product,productPage.region);
+  const hubRegion=regions.find(r=>markets[r].hub===pathName);
+  if(hubRegion)return hubMetadata(hubRegion);
+  const page=findSeoPage(slug);
   if(!page)return{};
   const path=pathFor(page);
-  const isMarketHub=page.slug.length===2&&['us','uk','de'].includes(page.slug[0]);
+  const isMarketHub=['us/buy-gold','uk/buy-gold','de/gold-kaufen'].includes(page.slug.join('/'));
   return {
     title:page.title,
     description:page.description,
     alternates:{
       canonical:path,
-      ...(isMarketHub?{languages:{'en-US':'/us/buy-gold','en-GB':'/uk/buy-gold','de-DE':'/de/gold-kaufen','x-default':'/'}}:{}),
+      ...(isMarketHub?{languages:{'en-US':'/us/buy-gold','en-GB':'/uk/buy-gold','de-DE':'/de/gold-kaufen','x-default':'/us/buy-gold'}}:{}),
     },
     openGraph:{title:page.title,description:page.description,url:path,type:'article',siteName:'Gold Finder',locale:page.language==='de'?'de_DE':'en_US'},
     twitter:{card:'summary_large_image',title:page.title,description:page.description},
@@ -68,7 +80,15 @@ function getRelatedPages(page:SeoPage){
 }
 
 export default async function SeoLanding({params}:Props){
-  const page=findSeoPage((await params).slug);
+  const slug=(await params).slug;
+  const pathName=`/${slug.join('/')}`;
+  const itemPage=findManufacturerPage(pathName);
+  if(itemPage)return <ManufacturerLanding product={itemPage.product} region={itemPage.region}/>;
+  const productPage=findProductPage(pathName);
+  if(productPage)return <ProductLanding {...productPage}/>;
+  const hubRegion=regions.find(r=>markets[r].hub===pathName);
+  if(hubRegion)return <ProductHub region={hubRegion}/>;
+  const page=findSeoPage(slug);
   if(!page)notFound();
   const de=page.language==='de';
   const path=`${origin}${pathFor(page)}`;
@@ -114,6 +134,8 @@ export default async function SeoLanding({params}:Props){
 
 function buildFinderHref(page:{slug:string[];query:string}){
   const params=new URLSearchParams();
+  const market=page.slug[0];
+  if(['de','us','uk'].includes(market))params.set('market',market);
   if(page.query)params.set('q',page.query);
   if(page.slug.includes('goldbarren-kaufen')||page.slug.includes('goldbarren'))params.set('type','Bars');
   if(page.slug.includes('goldmuenzen-kaufen')||page.slug.includes('goldmuenzen'))params.set('type','Coins');

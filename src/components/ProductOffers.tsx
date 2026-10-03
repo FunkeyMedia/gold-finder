@@ -1,0 +1,17 @@
+'use client';
+import {useEffect,useState} from 'react';
+import {products,markets,productPath,regions,type Region} from '@/lib/product-catalogue';
+import type {ProductResponse} from '@/lib/types';
+import {matchesProduct} from '@/lib/product-matching';
+const copy={de:{loading:'Angebote werden geladen …',empty:'Momentan können keine passenden Live-Angebote angezeigt werden. Nutze die offizielle Quelle und prüfe die Verfügbarkeit direkt beim Anbieter.',view:'Angebot bei Amazon.de · Werbung',search:'Auf Amazon.de suchen · Werbung',noPrice:'Aktuellen Preis beim Anbieter prüfen',asOf:'Datenstand',cached:'Gespeicherte Produktdaten; Preis und Verfügbarkeit erneut prüfen.',choose:'Land auswählen'},en:{loading:'Loading offers…',empty:'No matching live offers can currently be displayed. Consult the official source and check availability with the supplier.',view:'View on Amazon · Ad',search:'Search Amazon · Ad',noPrice:'Check the current price with the seller',asOf:'Data retrieved',cached:'Previously retrieved product data; recheck price and availability.',choose:'Choose a country'},fr:{loading:'Chargement des offres…',empty:'Aucune offre en direct ne peut être affichée actuellement. Consultez la source officielle et vérifiez la disponibilité auprès du vendeur.',view:'Voir sur Amazon',search:'Rechercher sur Amazon.fr',noPrice:'Vérifiez le prix actuel auprès du vendeur',asOf:'Données récupérées le',cached:'Données précédemment récupérées ; vérifiez à nouveau le prix et la disponibilité.',choose:'Choisir un pays'}};
+export default function ProductOffers({region,productId}:{region:Region;productId:string}){
+ const [data,setData]=useState<ProductResponse|null>(null),[loading,setLoading]=useState(['de','us','uk'].includes(region));
+ const product=products.find(p=>p.id===productId)!,m=markets[region],t=copy[m.language];
+ useEffect(()=>{if(!['de','us','uk'].includes(region))return;const controller=new AbortController();setLoading(true);fetch(`/api/products?market=${region}`,{signal:controller.signal}).then(r=>r.json()).then(d=>{setData(d);setLoading(false)}).catch(()=>{if(!controller.signal.aborted)setLoading(false)});return()=>controller.abort()},[region]);
+ if(region==='global')return <nav className="market-links" aria-label={t.choose}>{regions.filter(r=>r!=='global').map(r=><a key={r} href={productPath(product,r)}>{markets[r].label}</a>)}</nav>;
+ const domain=region==='de'?'www.amazon.de':region==='fr'?'www.amazon.fr':region==='uk'?'www.amazon.co.uk':'www.amazon.com';
+ const tag=region==='de'?'onlinestarkei-21':region==='us'?'goldfindercom-20':region==='uk'?'goldfindercom-21':undefined;
+ const search=new URL(`https://${domain}/s`);search.searchParams.set('k',product.query[m.language]);if(tag)search.searchParams.set('tag',tag);
+ const matches=(data?.products||[]).filter(p=>matchesProduct(p,product)).slice(0,6);
+ return <div>{loading?<p role="status">{t.loading}</p>:region!=='fr'&&!matches.length?<p>{t.empty}</p>:null}{data?.cached&&matches.length>0&&<p>{t.cached}</p>}<div className="offer-grid">{matches.map(p=><article key={p.asin}><h3>{p.title}</h3><p>{data?.live&&p.price?p.price.display:t.noPrice}</p><a href={p.detailPageUrl} target="_blank" rel="sponsored nofollow noopener noreferrer">{t.view} ↗</a></article>)}</div>{data?.fetchedAt&&matches.length>0&&<p className="updated">{t.asOf}: {new Date(data.fetchedAt).toLocaleString(m.locale)}</p>}<a className="seo-cta" href={search.toString()} target="_blank" rel={`${tag?'sponsored ':''}nofollow noopener noreferrer`}>{t.search} ↗</a></div>;
+}

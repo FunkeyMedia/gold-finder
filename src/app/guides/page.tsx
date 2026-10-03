@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {ArrowRight} from 'lucide-react';
 import BrandLogo from '@/components/BrandLogo';
+import {regions,markets} from '@/lib/product-catalogue';
 import {seoPages} from '@/lib/seo-pages';
 
 export const metadata:Metadata={
@@ -25,6 +26,7 @@ export default function GuidesPage(){
       <p className="eyebrow">Gold knowledge</p>
       <h1>Explore our gold guides.</h1>
       <p className="seo-intro">Find the relevant guide by country, gold bar weight or bullion coin. Each guide links to its primary sources and explains what to check in a live seller offer.</p>
+      <section className="directory-group"><h2>Product pages by country</h2><div className="directory-links">{regions.map(r=><a key={r} href={markets[r].hub}><strong>{markets[r].label}</strong></a>)}</div></section>
       <nav className="directory-shortcuts" aria-label="Guide topics">{groups.map(group=><a key={group.id} href={`#${group.id}`}>{group.title}</a>)}</nav>
       {groups.map(group=><section className="directory-group" id={group.id} key={group.id}>
         <h2>{group.title}</h2><p>{group.description}</p>

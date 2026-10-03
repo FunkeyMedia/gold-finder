@@ -1,0 +1,807 @@
+[
+  {
+    "slug": "miracle-gold-001-g",
+    "asins": [
+      "B01MUNWOHG"
+    ],
+    "brand": "Miracle Gold",
+    "grams": 0.01,
+    "fineness": "999.9",
+    "packaging": "mini",
+    "name": {
+      "de": "Mini-Goldbarren · 0,01 g",
+      "en": "Mini gold bar · 0.01 g",
+      "fr": "Mini-lingotin d’or · 0,01 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "miracle-gold-005-g",
+    "asins": [
+      "B01N9ZIZLI"
+    ],
+    "brand": "Miracle Gold",
+    "grams": 0.05,
+    "fineness": "999.9",
+    "packaging": "mini",
+    "name": {
+      "de": "Mini-Goldbarren · 0,05 g",
+      "en": "Mini gold bar · 0.05 g",
+      "fr": "Mini-lingotin d’or · 0,05 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "guardian-angel-goldcard",
+    "asins": [
+      "B0H4VRPBP7"
+    ],
+    "brand": "DEUTSCHER MÜNZEXPRESS",
+    "grams": null,
+    "fineness": null,
+    "packaging": "goldcard",
+    "name": {
+      "de": "Guardian Angel Goldcard",
+      "en": "Guardian Angel gold card",
+      "fr": "Carte en or Guardian Angel"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "carl-spitzweg-der-arme-poet",
+    "asins": [
+      "B0DGLNXDS2"
+    ],
+    "brand": "DEUTSCHER MÜNZEXPRESS",
+    "grams": null,
+    "fineness": null,
+    "packaging": "coincard",
+    "name": {
+      "de": "Carl Spitzweg – Der arme Poet",
+      "en": "Carl Spitzweg – The Poor Poet",
+      "fr": "Carl Spitzweg – Le Pauvre Poète"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "ariane-6-journey-into-space",
+    "asins": [
+      "B0GSG7N768"
+    ],
+    "brand": "DEUTSCHER MÜNZEXPRESS",
+    "grams": null,
+    "fineness": null,
+    "packaging": "coincard",
+    "name": {
+      "de": "Ariane 6 – Journey Into Space",
+      "en": "Ariane 6 – Journey Into Space",
+      "fr": "Ariane 6 – Journey Into Space"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "marienkaefer-a-lot-of-luck",
+    "asins": [
+      "B0GXKZHPD8"
+    ],
+    "brand": "DEUTSCHER MÜNZEXPRESS",
+    "grams": null,
+    "fineness": null,
+    "packaging": "coincard",
+    "name": {
+      "de": "Marienkäfer – A Lot of Luck",
+      "en": "Ladybird – A Lot of Luck",
+      "fr": "Coccinelle – A Lot of Luck"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "geschenkbarren-01-g-alles-gute",
+    "asins": [
+      "B08RCVF4D3"
+    ],
+    "brand": "Geschenkbarren",
+    "grams": 0.1,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "Goldbarren Alles Gute · 0,1 g",
+      "en": "Best Wishes gold bar · 0.1 g",
+      "fr": "Lingotin d’or Meilleurs vœux · 0,1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "mona-lisa-togo-2024",
+    "asins": [
+      "B0HGMLFQGJ"
+    ],
+    "brand": "BAYERISCHES MÜNZKONTOR",
+    "grams": 0.1555175,
+    "fineness": "999",
+    "packaging": "proof",
+    "name": {
+      "de": "Mona Lisa Togo 2024 · 1/200 oz",
+      "en": "Mona Lisa Togo 2024 · 1/200 oz",
+      "fr": "Mona Lisa Togo 2024 · 1/200 oz"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-05-g-geschenkbeutel",
+    "asins": [
+      "B09VY18M7P"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 0.5,
+    "fineness": "999.9",
+    "packaging": "pouch",
+    "name": {
+      "de": "Valcambi Goldbarren mit Geschenkbeutel · 0,5 g",
+      "en": "Valcambi gold bar with gift pouch · 0.5 g",
+      "fr": "Lingotin Valcambi avec pochette cadeau · 0,5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldschulz-05-g-geschenk",
+    "asins": [
+      "B0DSJ89XZK"
+    ],
+    "brand": "Goldschulz",
+    "grams": 0.5,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "Goldbarren im Geschenkset · 0,5 g",
+      "en": "Gold bar gift set · 0.5 g",
+      "fr": "Coffret cadeau avec lingotin · 0,5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-05-g-motivbox",
+    "asins": [
+      "B0G3HKTHVJ"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 0.5,
+    "fineness": "999.9",
+    "packaging": "box",
+    "name": {
+      "de": "Valcambi Goldbarren in Motivbox · 0,5 g",
+      "en": "Valcambi gold bar in presentation box · 0.5 g",
+      "fr": "Lingotin Valcambi en coffret illustré · 0,5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heraeus-1-g-blister",
+    "asins": [
+      "B013LQF75W"
+    ],
+    "brand": "Heraeus",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "blister",
+    "name": {
+      "de": "Heraeus Goldbarren im Blister · 1 g",
+      "en": "Heraeus gold bar in blister pack · 1 g",
+      "fr": "Lingotin Heraeus sous blister · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "marilyn-monroe-100-geburtstag",
+    "asins": [
+      "B0GVJV1K6W"
+    ],
+    "brand": "DEUTSCHER MÜNZEXPRESS",
+    "grams": null,
+    "fineness": null,
+    "packaging": "proof",
+    "name": {
+      "de": "Marilyn Monroe – 100. Geburtstag",
+      "en": "Marilyn Monroe – 100th anniversary",
+      "fr": "Marilyn Monroe – centenaire"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heimerle-meule-1-g-secain",
+    "asins": [
+      "B092558C96"
+    ],
+    "brand": "Heimerle + Meule",
+    "grams": 1,
+    "fineness": null,
+    "packaging": "card",
+    "name": {
+      "de": "Heimerle + Meule Secain Card · 1 g",
+      "en": "Heimerle + Meule Secain Card · 1 g",
+      "fr": "Heimerle + Meule Secain Card · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "c-hafner-1-g-goldschulz",
+    "asins": [
+      "B0DXQ4ZZJ5"
+    ],
+    "brand": "Goldschulz",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "C. Hafner Goldbarren mit Grußkarte · 1 g",
+      "en": "C. Hafner gold bar with greeting card · 1 g",
+      "fr": "Lingotin C. Hafner avec carte de vœux · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-1-g-combibar-geschenk",
+    "asins": [
+      "B0GSSGKXGF"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "Valcambi CombiBar mit Grußkarte · 1 g",
+      "en": "Valcambi CombiBar with greeting card · 1 g",
+      "fr": "Valcambi CombiBar avec carte de vœux · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldschulz-2x05-g",
+    "asins": [
+      "B0DSJF7MB7"
+    ],
+    "brand": "Goldschulz",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "split",
+    "name": {
+      "de": "Goldbarren-Set 2 × 0,5 g",
+      "en": "Gold bar set 2 × 0.5 g",
+      "fr": "Lot de lingotins 2 × 0,5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heraeus-1-g-goldstuecke24",
+    "asins": [
+      "B09X63XD5F"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "Heraeus Goldbarren mit Geschenkumschlag · 1 g",
+      "en": "Heraeus gold bar with gift envelope · 1 g",
+      "fr": "Lingotin Heraeus avec enveloppe cadeau · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldschulz-1-g-taufe-elefant",
+    "asins": [
+      "B0D1G776B6"
+    ],
+    "brand": "Goldschulz",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "box",
+    "name": {
+      "de": "Goldbarren Taufe · Elefant · 1 g",
+      "en": "Christening gold bar · elephant · 1 g",
+      "fr": "Lingotin de baptême · éléphant · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldschulz-1-g-waage",
+    "asins": [
+      "B0CYCJJ8Z2"
+    ],
+    "brand": "Goldschulz",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "box",
+    "name": {
+      "de": "Goldbarren Sternzeichen Waage · 1 g",
+      "en": "Libra zodiac gold bar · 1 g",
+      "fr": "Lingotin signe astrologique Balance · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldschulz-1-g-taufe",
+    "asins": [
+      "B0CYLTCRR3"
+    ],
+    "brand": "Goldschulz",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "box",
+    "name": {
+      "de": "Goldbarren Alles Liebe zur Taufe · 1 g",
+      "en": "Christening Wishes gold bar · 1 g",
+      "fr": "Lingotin Vœux de baptême · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-1-g-mein-erster-goldbarren",
+    "asins": [
+      "B0D354MRSH"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "case",
+    "name": {
+      "de": "Mein erster Goldbarren · weißes Etui · 1 g",
+      "en": "My first gold bar · white case · 1 g",
+      "fr": "Mon premier lingotin · écrin blanc · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-1-g-goldkoffer",
+    "asins": [
+      "B091QFLLZ4"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "case",
+    "name": {
+      "de": "Valcambi Goldbarren im Mini-Koffer · 1 g",
+      "en": "Valcambi gold bar in miniature case · 1 g",
+      "fr": "Lingotin Valcambi en mini-mallette · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldstuecke24-1-g-taufgeschenk",
+    "asins": [
+      "B0GTVRY4XC"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 1,
+    "fineness": "999.9",
+    "packaging": "box",
+    "name": {
+      "de": "Goldbarren Taufgeschenk mit Schleife · 1 g",
+      "en": "Christening gold bar gift with bow · 1 g",
+      "fr": "Cadeau de baptême en or avec ruban · 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "cook-islands-kleeblatt",
+    "asins": [
+      "B0HC7D5FL2"
+    ],
+    "brand": "DEUTSCHER MÜNZEXPRESS",
+    "grams": null,
+    "fineness": null,
+    "packaging": "proof",
+    "name": {
+      "de": "Cook Islands Glücksmünze · Kleeblatt",
+      "en": "Cook Islands lucky coin · clover",
+      "fr": "Pièce porte-bonheur Îles Cook · trèfle"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "c-hafner-2-g-goldstuecke24",
+    "asins": [
+      "B0DSLKNPXR"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 2,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "C. Hafner Goldbarren mit Grußkarte · 2 g",
+      "en": "C. Hafner gold bar with greeting card · 2 g",
+      "fr": "Lingotin C. Hafner avec carte de vœux · 2 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "c-hafner-2-g-blister",
+    "asins": [
+      "B0C5R5L6C2"
+    ],
+    "brand": "Golden Linde",
+    "grams": 2,
+    "fineness": "999.9",
+    "packaging": "blister",
+    "name": {
+      "de": "C. Hafner Goldbarren im Blister · 2 g",
+      "en": "C. Hafner gold bar in blister pack · 2 g",
+      "fr": "Lingotin C. Hafner sous blister · 2 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldschulz-2x1-g",
+    "asins": [
+      "B0DSJCVLPC"
+    ],
+    "brand": "Goldschulz",
+    "grams": 2,
+    "fineness": "999.9",
+    "packaging": "split",
+    "name": {
+      "de": "Goldbarren-Set 2 × 1 g",
+      "en": "Gold bar set 2 × 1 g",
+      "fr": "Lot de lingotins 2 × 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heraeus-2-g-geschenk",
+    "asins": [
+      "B0CTYBMX9W",
+      "B07YXWHCJB",
+      "B082X8QFCS"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 2,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "Heraeus Goldbarren im Geschenkset · 2 g",
+      "en": "Heraeus gold bar gift set · 2 g",
+      "fr": "Coffret cadeau avec lingotin Heraeus · 2 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "argor-heraeus-2-g",
+    "asins": [
+      "B0GVSCKK4X"
+    ],
+    "brand": "Albellion",
+    "grams": 2,
+    "fineness": "999.9",
+    "packaging": "blister",
+    "name": {
+      "de": "Argor-Heraeus Goldbarren · 2 g",
+      "en": "Argor-Heraeus gold bar · 2 g",
+      "fr": "Lingotin Argor-Heraeus · 2 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "weltwunder-7x1200-oz",
+    "asins": [
+      "B0HDZHKW7M"
+    ],
+    "brand": "BAYERISCHES MÜNZKONTOR",
+    "grams": 1.0886225,
+    "fineness": "999",
+    "packaging": "collection",
+    "name": {
+      "de": "Weltwunder der Moderne · 7 × 1/200 oz",
+      "en": "Modern Wonders · 7 × 1/200 oz",
+      "fr": "Merveilles modernes · 7 × 1/200 oz"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-combibar-4-g",
+    "asins": [
+      "B0GT8TDTFQ"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 4,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "Valcambi CombiBar Goldgeschenk · 4 g",
+      "en": "Valcambi CombiBar gold gift · 4 g",
+      "fr": "Cadeau en or Valcambi CombiBar · 4 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "argor-heraeus-5-g",
+    "asins": [
+      "B082RC3781",
+      "B0FHWLY32Q"
+    ],
+    "brand": "Argor-Heraeus",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "blister",
+    "name": {
+      "de": "Argor-Heraeus Goldbarren im Blister · 5 g",
+      "en": "Argor-Heraeus gold bar in blister pack · 5 g",
+      "fr": "Lingotin Argor-Heraeus sous blister · 5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heraeus-kinebar-5-g",
+    "asins": [
+      "B0CXF2J2FF"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "kinebar",
+    "name": {
+      "de": "Heraeus Kinebar Goldbarren · 5 g",
+      "en": "Heraeus Kinebar gold bar · 5 g",
+      "fr": "Lingotin Heraeus Kinebar · 5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heraeus-5-g-blister",
+    "asins": [
+      "B0CW3FRS4J",
+      "B082VB6M8B"
+    ],
+    "brand": "Heraeus",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "blister",
+    "name": {
+      "de": "Heraeus Goldbarren im Blister · 5 g",
+      "en": "Heraeus gold bar in blister pack · 5 g",
+      "fr": "Lingotin Heraeus sous blister · 5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heraeus-5-g-goldschulz",
+    "asins": [
+      "B0FZKH6FGL"
+    ],
+    "brand": "Goldschulz",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "gift",
+    "name": {
+      "de": "Heraeus Goldbarren mit Grußkarte · 5 g",
+      "en": "Heraeus gold bar with greeting card · 5 g",
+      "fr": "Lingotin Heraeus avec carte de vœux · 5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heimerle-meule-5-g",
+    "asins": [
+      "B0C9ZY1GP1"
+    ],
+    "brand": "Golden Linde",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "blister",
+    "name": {
+      "de": "Heimerle + Meule Goldbarren · 5 g",
+      "en": "Heimerle + Meule gold bar · 5 g",
+      "fr": "Lingotin Heimerle + Meule · 5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-5x1-g-motivbox",
+    "asins": [
+      "B09Q3FTZ9C"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "split",
+    "name": {
+      "de": "Valcambi CombiBar 5 × 1 g in Motivbox",
+      "en": "Valcambi CombiBar 5 × 1 g in presentation box",
+      "fr": "Valcambi CombiBar 5 × 1 g en coffret illustré"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-hochzeit-3-5-10-g",
+    "asins": [
+      "B01MS51LM2"
+    ],
+    "brand": "Valcambi",
+    "grams": null,
+    "fineness": "999.9",
+    "packaging": "variants",
+    "name": {
+      "de": "Valcambi Hochzeit · Größenwahl 3/5/10 g",
+      "en": "Valcambi wedding gift · 3/5/10 g options",
+      "fr": "Cadeau de mariage Valcambi · formats 3/5/10 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "gold-statt-geld-5x1-g",
+    "asins": [
+      "B0BTC3HMF2"
+    ],
+    "brand": "Goldstücke24",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "split",
+    "name": {
+      "de": "Gold statt Geld · 5 × 1 g in Flipmotivbox",
+      "en": "Gold instead of cash · 5 × 1 g flip-design box",
+      "fr": "De l’or plutôt que de l’argent · coffret animé 5 × 1 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "valcambi-suisse-5-g",
+    "asins": [
+      "B07WFP6RJP"
+    ],
+    "brand": "Valcambi Suisse",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "blister",
+    "name": {
+      "de": "Valcambi Suisse Goldbarren · 5 g",
+      "en": "Valcambi Suisse gold bar · 5 g",
+      "fr": "Lingotin Valcambi Suisse · 5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "perth-mint-5-g-kangaroo",
+    "asins": [
+      "B071L7BCY5"
+    ],
+    "brand": "Perth Mint",
+    "grams": 5,
+    "fineness": "999.9",
+    "packaging": "card",
+    "name": {
+      "de": "Perth Mint Känguru Goldbarren · 5 g",
+      "en": "Perth Mint Kangaroo gold bar · 5 g",
+      "fr": "Lingotin Perth Mint Kangourou · 5 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldschulz-10x1-g-motivbox",
+    "asins": [
+      "B0CMXNPR7G"
+    ],
+    "brand": "Goldschulz",
+    "grams": 10,
+    "fineness": "999.9",
+    "packaging": "split",
+    "name": {
+      "de": "Goldtafel 10 × 1 g in Motivbox",
+      "en": "Gold sheet 10 × 1 g in presentation box",
+      "fr": "Plaquette d’or 10 × 1 g en coffret illustré"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "goldschulz-10x1-g-au",
+    "asins": [
+      "B0CJ54MQZX"
+    ],
+    "brand": "Goldschulz",
+    "grams": 10,
+    "fineness": "999.9",
+    "packaging": "split",
+    "name": {
+      "de": "Goldtafel 10 × 1 g · Motiv AU",
+      "en": "Gold sheet 10 × 1 g · AU design",
+      "fr": "Plaquette d’or 10 × 1 g · motif AU"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heraeus-10-g",
+    "asins": [
+      "B0GP6V32GC",
+      "B0G1BP8NL2"
+    ],
+    "brand": "Heraeus",
+    "grams": 10,
+    "fineness": "999.9",
+    "packaging": "standard",
+    "name": {
+      "de": "Heraeus Goldbarren · 10 g",
+      "en": "Heraeus gold bar · 10 g",
+      "fr": "Lingotin Heraeus · 10 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "argor-heraeus-10-g",
+    "asins": [
+      "B082RBP75D"
+    ],
+    "brand": "Argor-Heraeus",
+    "grams": 10,
+    "fineness": "999.9",
+    "packaging": "blister",
+    "name": {
+      "de": "Argor-Heraeus Goldbarren im Blister · 10 g",
+      "en": "Argor-Heraeus gold bar in blister pack · 10 g",
+      "fr": "Lingotin Argor-Heraeus sous blister · 10 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "argor-heraeus-kinebar-20-g",
+    "asins": [
+      "B07TRGGF4C"
+    ],
+    "brand": "Stollberg Edelmetalle",
+    "grams": 20,
+    "fineness": "999.9",
+    "packaging": "kinebar",
+    "name": {
+      "de": "Argor-Heraeus Kinebar Goldbarren · 20 g",
+      "en": "Argor-Heraeus Kinebar gold bar · 20 g",
+      "fr": "Lingotin Argor-Heraeus Kinebar · 20 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "argor-heraeus-20-g-black",
+    "asins": [
+      "B071VM5YSS"
+    ],
+    "brand": "Argor-Heraeus",
+    "grams": 20,
+    "fineness": "999.9",
+    "packaging": "standard",
+    "name": {
+      "de": "Argor-Heraeus Black Goldbarren · 20 g",
+      "en": "Argor-Heraeus Black gold bar · 20 g",
+      "fr": "Lingotin Argor-Heraeus Black · 20 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "heraeus-20-g",
+    "asins": [
+      "B0GVS282DF"
+    ],
+    "brand": "Heraeus",
+    "grams": 20,
+    "fineness": "999.9",
+    "packaging": "standard",
+    "name": {
+      "de": "Heraeus Goldbarren · 20 g",
+      "en": "Heraeus gold bar · 20 g",
+      "fr": "Lingotin Heraeus · 20 g"
+    },
+    "checked": "2026-10-03"
+  },
+  {
+    "slug": "argor-heraeus-kinebar-1-oz",
+    "asins": [
+      "B07TRHSG9B"
+    ],
+    "brand": "Stollberg Edelmetalle",
+    "grams": 31.1035,
+    "fineness": "999.9",
+    "packaging": "kinebar",
+    "name": {
+      "de": "Argor-Heraeus Kinebar · 1 oz",
+      "en": "Argor-Heraeus Kinebar · 1 oz",
+      "fr": "Argor-Heraeus Kinebar · 1 oz"
+    },
+    "checked": "2026-10-03"
+  }
+]
