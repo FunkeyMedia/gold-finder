@@ -6,7 +6,6 @@ export default function sitemap():MetadataRoute.Sitemap{
  const productPaths=new Set(productPages.map(p=>p.path));
  return [
   ...['','/guides'].map(path=>({url:`${origin}${path}`,lastModified:reviewed})),
-  ...['/impressum','/datenschutz'].map(path=>({url:`${origin}${path}`,lastModified:reviewed})),
   ...seoPages.filter(p=>!productPaths.has(`/${p.slug.join('/')}`)).map(p=>({url:`${origin}/${p.slug.join('/')}`,lastModified:['us/buy-gold','uk/buy-gold','de/gold-kaufen'].includes(p.slug.join('/'))?reviewed:'2026-09-26'})),
   ...regions.map(r=>({url:`${origin}${markets[r].hub}`,lastModified:reviewed,alternates:{languages:hubAlternates()}})),
   ...manufacturerPages.map(({product,path})=>({url:`${origin}${path}`,lastModified:product.checked,alternates:{languages:manufacturerAlternates(product)}})),
