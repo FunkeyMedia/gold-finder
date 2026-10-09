@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import LegalPage from '../../components/LegalPage';
-export const metadata: Metadata = {title:'Legal Notice / Impressum — Gold Finder',description:'Operator and contact details for Gold Finder, including editorial responsibility and affiliate disclosure.',alternates:{canonical:'/impressum'}};
+export const metadata: Metadata = {robots:{index:false,follow:true},title:'Legal Notice / Impressum — Gold Finder',description:'Operator and contact details for Gold Finder, including editorial responsibility and affiliate disclosure.',alternates:{canonical:'/impressum'}};
 export default function Impressum(){return <LegalPage title="Legal Notice / Impressum">
 <h2>Website operator</h2><p>Provider information pursuant to § 5 of the German Digital Services Act (DDG).</p>
 <address><strong>Pascal Weyers</strong><br/>Gold Finder · gold-finder.com<br/>Birkenwaldstr. 46<br/>63179 Obertshausen<br/>Germany</address>

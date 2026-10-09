@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import LegalPage from '../../components/LegalPage';
-export const metadata: Metadata = {title:'Privacy Policy / Datenschutz — Gold Finder',description:'How Gold Finder handles technical access data, product searches, external links and privacy rights.',alternates:{canonical:'/datenschutz'}};
+export const metadata: Metadata = {robots:{index:false,follow:true},title:'Privacy Policy / Datenschutz — Gold Finder',description:'How Gold Finder handles technical access data, product searches, external links and privacy rights.',alternates:{canonical:'/datenschutz'}};
 export default function Datenschutz(){return <LegalPage title="Privacy Policy / Datenschutz">
 <p>This notice explains the processing of personal data when you visit gold-finder.com or contact its operator.</p>
 <h2>1. Controller and contact</h2><address>Pascal Weyers<br/>Birkenwaldstr. 46<br/>63179 Obertshausen, Germany<br/>Email: <a href="mailto:info@noonoo.de">info@noonoo.de</a></address>
