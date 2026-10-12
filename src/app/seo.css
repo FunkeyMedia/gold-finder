@@ -5,3 +5,6 @@
 .product-detail-link{display:inline-block;margin:6px 0 14px;color:#785513;text-decoration:underline;font-size:.85rem}
 /* Landing-page navigation must not inherit the home page's mobile overlay menu. */
 .seo-page nav{position:static;background:transparent;padding:0;flex-direction:row;display:flex}.seo-page .market-links{flex-wrap:wrap}.seo-page .market-links a{opacity:1}.seo-page .directory-shortcuts{flex-wrap:wrap}
+
+.weight-comparison{overflow-x:auto}.weight-comparison table{width:100%;min-width:580px;border-collapse:collapse}.weight-comparison th,.weight-comparison td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid #cbd3c5}.weight-comparison caption{text-align:left;padding:12px 0}
+.seo-page .ten-gram-guide{display:block}.ten-gram-guide h2{max-width:850px}.ten-gram-guide h3{margin-top:32px}

@@ -7,8 +7,8 @@ export default function sitemap():MetadataRoute.Sitemap{
  return [
   ...['','/guides'].map(path=>({url:`${origin}${path}`,lastModified:reviewed})),
   ...seoPages.filter(p=>!productPaths.has(`/${p.slug.join('/')}`)).map(p=>({url:`${origin}/${p.slug.join('/')}`,lastModified:['us/buy-gold','uk/buy-gold','de/gold-kaufen'].includes(p.slug.join('/'))?reviewed:'2026-09-26'})),
-  ...regions.map(r=>({url:`${origin}${markets[r].hub}`,lastModified:reviewed,alternates:{languages:hubAlternates()}})),
+  ...regions.map(r=>({url:`${origin}${markets[r].hub}`,lastModified:r==='de'?'2026-10-12':reviewed,alternates:{languages:hubAlternates()}})),
   ...manufacturerPages.map(({product,path})=>({url:`${origin}${path}`,lastModified:product.checked,alternates:{languages:manufacturerAlternates(product)}})),
-  ...productPages.map(({product,region,path})=>({url:`${origin}${path}`,lastModified:reviewed,alternates:{languages:productAlternates(product)}})),
+  ...productPages.map(({product,region,path})=>({url:`${origin}${path}`,lastModified:region==='de'&&product.id==='bar-10-g'?'2026-10-12':reviewed,alternates:{languages:productAlternates(product)}})),
  ];
 }
