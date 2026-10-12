@@ -4,7 +4,7 @@ import { getCache, waitUntil } from '@vercel/functions';
 import type { AmazonProduct, Currency, Marketplace, ProductResponse } from './types';
 type Config={name:string;domain:string;tag:string;currency:Currency;locale:string;searches:string[]};
 export const MARKETPLACES:Record<Marketplace,Config>={
- de:{name:'Germany',domain:'www.amazon.de',tag:'Onlinestarkei-21',currency:'EUR',locale:'de_DE',searches:['Anlagegold Feingold','Goldbarren 999,9','Goldbarren 1g 2g 5g','Goldbarren 10g 20g','Goldbarren 1 oz 50g','Goldbarren 100g 250g','Goldmünze Feingold','Krügerrand Maple Leaf Britannia Gold']},
+ de:{name:'Germany',domain:'www.amazon.de',tag:'onlinestarkei-21',currency:'EUR',locale:'de_DE',searches:['Anlagegold Feingold','Goldbarren 999,9','Goldbarren 1g 2g 5g','Goldbarren 10g 20g','Goldbarren 1 oz 50g','Goldbarren 100g 250g','Goldmünze Feingold','Krügerrand Maple Leaf Britannia Gold']},
  us:{name:'United States',domain:'www.amazon.com',tag:'goldfindercom-20',currency:'USD',locale:'en_US',searches:['investment gold bullion','999.9 gold bars','1 gram 5 gram gold bar','10 gram 20 gram gold bar','1 oz gold bar','gold bullion coins','Krugerrand Maple Leaf Britannia gold coin']},
  uk:{name:'United Kingdom',domain:'www.amazon.co.uk',tag:'goldfindercom-21',currency:'GBP',locale:'en_GB',searches:['investment gold bullion','999.9 gold bars','1 gram 5 gram gold bar','10 gram 20 gram gold bar','1 oz gold bar','gold bullion coins','Krugerrand Maple Leaf Britannia gold coin']}
 };
