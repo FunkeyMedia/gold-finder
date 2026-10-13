@@ -1,12 +1,13 @@
 import 'server-only';
 import {isBullionListing} from './product-quality';
+import {AMAZON_TAGS} from './affiliate-tags';
 import { getCache, waitUntil } from '@vercel/functions';
 import type { AmazonProduct, Currency, Marketplace, ProductResponse } from './types';
 type Config={name:string;domain:string;tag:string;currency:Currency;locale:string;searches:string[]};
 export const MARKETPLACES:Record<Marketplace,Config>={
- de:{name:'Germany',domain:'www.amazon.de',tag:'onlinestarkei-21',currency:'EUR',locale:'de_DE',searches:['Anlagegold Feingold','Goldbarren 999,9','Goldbarren 1g 2g 5g','Goldbarren 10g 20g','Goldbarren 1 oz 50g','Goldbarren 100g 250g','Goldmünze Feingold','Krügerrand Maple Leaf Britannia Gold']},
- us:{name:'United States',domain:'www.amazon.com',tag:'goldfindercom-20',currency:'USD',locale:'en_US',searches:['investment gold bullion','999.9 gold bars','1 gram 5 gram gold bar','10 gram 20 gram gold bar','1 oz gold bar','gold bullion coins','Krugerrand Maple Leaf Britannia gold coin']},
- uk:{name:'United Kingdom',domain:'www.amazon.co.uk',tag:'goldfindercom-21',currency:'GBP',locale:'en_GB',searches:['investment gold bullion','999.9 gold bars','1 gram 5 gram gold bar','10 gram 20 gram gold bar','1 oz gold bar','gold bullion coins','Krugerrand Maple Leaf Britannia gold coin']}
+ de:{name:'Germany',domain:'www.amazon.de',tag:AMAZON_TAGS.de,currency:'EUR',locale:'de_DE',searches:['Anlagegold Feingold','Goldbarren 999,9','Goldbarren 1g 2g 5g','Goldbarren 10g 20g','Goldbarren 1 oz 50g','Goldbarren 100g 250g','Goldmünze Feingold','Krügerrand Maple Leaf Britannia Gold']},
+ us:{name:'United States',domain:'www.amazon.com',tag:AMAZON_TAGS.us,currency:'USD',locale:'en_US',searches:['investment gold bullion','999.9 gold bars','1 gram 5 gram gold bar','10 gram 20 gram gold bar','1 oz gold bar','gold bullion coins','Krugerrand Maple Leaf Britannia gold coin']},
+ uk:{name:'United Kingdom',domain:'www.amazon.co.uk',tag:AMAZON_TAGS.uk,currency:'GBP',locale:'en_GB',searches:['investment gold bullion','999.9 gold bars','1 gram 5 gram gold bar','10 gram 20 gram gold bar','1 oz gold bar','gold bullion coins','Krugerrand Maple Leaf Britannia gold coin']}
 };
 const TOKEN_URL='https://api.amazon.co.uk/auth/o2/token',SEARCH_URL='https://creatorsapi.amazon/catalog/v1/searchItems',FRESH_MS=30*60*1000,LAST_GOOD_TTL_SECONDS=24*60*60;
 const ALLOWED_IMAGES=new Set(['m.media-amazon.com','images-na.ssl-images-amazon.com','images-eu.ssl-images-amazon.com']);
