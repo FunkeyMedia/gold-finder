@@ -10,7 +10,7 @@ An English-language discovery and comparison experience for physical investment 
 - Product comparison for up to four items
 - Responsive premium interface
 - Buying guide, research references, FAQ and affiliate disclosure
-- Server-side Amazon.de Creators API product feed using PartnerNet ID `Onlinestarkei-21`
+- Server-side Amazon.de Creators API product feed using PartnerNet tracking IDs from `src/lib/affiliate-tags.ts`
 - Live ASINs, parent ASINs, product images, availability, features and current Euro prices
 - Parent-ASIN model deduplication, 30-minute caching, request timeouts and a price-free outage state
 - SEO metadata and sitemap
