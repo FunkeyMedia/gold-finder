@@ -1,6 +1,6 @@
 const base=process.env.VERIFY_BASE_URL||'http://localhost:3000';
 const market=process.env.VERIFY_MARKET||'de';
-const config={de:{domain:'www.amazon.de',tag:'Onlinestarkei-21',currency:'EUR'},us:{domain:'www.amazon.com',tag:'goldfindercom-20',currency:'USD'},uk:{domain:'www.amazon.co.uk',tag:'goldfindercom-21',currency:'GBP'}}[market];
+const config={de:{domain:'www.amazon.de',tag:'fkm-goldfinder-21',currency:'EUR'},us:{domain:'www.amazon.com',tag:'goldfindercom-20',currency:'USD'},uk:{domain:'www.amazon.co.uk',tag:'goldfindercom-21',currency:'GBP'}}[market];
 if(!config)throw new Error('Unsupported VERIFY_MARKET');
 const response=await fetch(`${base}/api/products?market=${market}`,{signal:AbortSignal.timeout(60000)});if(!response.ok)throw new Error(`API returned ${response.status}`);const data=await response.json();if(!data.live)throw new Error(data.message||'Amazon response is not live');
 const allowedImages=new Set(['m.media-amazon.com','images-na.ssl-images-amazon.com','images-eu.ssl-images-amazon.com']),failures=[],parentAsins=new Set();
